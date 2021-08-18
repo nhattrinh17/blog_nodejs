@@ -3,7 +3,10 @@ const express = require('express');
 const morgan = require('morgan');
 const handlebars = require('express-handlebars');
 const app = express();
-const port = 3000;
+const port = 3030;
+
+// Đọc file tĩnh
+app.use(express.static(path.join(__dirname, "public")));
 
 // Http logger
 app.use(morgan("combined"));
