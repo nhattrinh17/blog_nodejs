@@ -29,7 +29,7 @@
     "express-handlebars": "^5.3.3"
   },
   "devDependencies": {
-    "husky": "^4.2.5",
+    "husky": "^7.0.1",
     "lint-staged": "^11.1.2",
     "morgan": "^1.10.0",
     "node-sass": "^6.0.1",
