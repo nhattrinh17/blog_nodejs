@@ -5,7 +5,6 @@
   "main": "src/main.js",
   "scripts": {
     "start": "nodemon --inspect src/main.js",
-    "pre-commit": "lint-staged",
     "prepare": "husky install",
     "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
