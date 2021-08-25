@@ -1,7 +1,17 @@
+var Course = require('../models/Courses');
+
 class SiteContronllers {
-    // [GET] / new
+    // [GET] / home
     index(req, res) {
-        res.render('home');
+        Course.find({}, function (error, courses) {
+            if (!error) {
+                res.json(courses);
+            } else {
+                res.status(400).json({ error: 'ERROR !!!' });
+            }
+        });
+
+        // res.render('home');
     }
 
     // [GET] / search

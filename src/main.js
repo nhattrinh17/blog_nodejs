@@ -3,9 +3,14 @@ const express = require('express');
 const morgan = require('morgan');
 const handlebars = require('express-handlebars');
 const app = express();
+
 const port = 3030;
 
 const route = require('./routes');
+const db = require('./config/db');
+
+// Connect Db
+db.connect();
 
 // Đọc file tĩnh
 app.use(express.static(path.join(__dirname, 'public')));
