@@ -1,17 +1,16 @@
-var Course = require('../models/Courses');
+const Course = require('../models/Courses');
+const { muntipleMongooseToObjtect } = require('../../util/mongoose');
 
 class SiteContronllers {
     // [GET] / home
-    index(req, res) {
-        Course.find({}, function (error, courses) {
-            if (!error) {
-                res.json(courses);
-            } else {
-                res.status(400).json({ error: 'ERROR !!!' });
-            }
-        });
-
-        // res.render('home');
+    index(req, res, next) {
+        Course.find({})
+            .then((courses) => {
+                res.render('home', {
+                    courses: muntipleMongooseToObjtect(courses),
+                });
+            })
+            .catch(next);
     }
 
     // [GET] / search

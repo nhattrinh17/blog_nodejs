@@ -1,9 +1,21 @@
 @import 'valiable';
 
-h1 {
-    color: $violet-color;
+.card-course-item {
+    margin-top: 16px;
 }
 
-h2 {
-    color: $red-color;
+.user-avt {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-left: 8px;
+}
+
+// .course-desc{
+//     min-height: 250px;
+// }
+
+.checkbox-select-all-options {
+    margin: 0 10px;
+    max-width: 20%;
 }
